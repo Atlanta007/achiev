@@ -213,3 +213,101 @@ footer{
     font-size: 25px;
     left: 5px;
 }
+@media  (max-width: 414px){
+    .container{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        border-radius: 20px;
+        height: 60vh;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+    }
+    footer{
+        background-color: #fff;
+        position: relative;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: 0;
+        bottom: 0;
+    }
+    .lastfoot{
+        display: flex;
+        gap: 10px;
+        position: relative;
+        bottom: 50px;
+        left: 0;
+        width: fit-content;
+    }
+    .imgdiv{
+        position: relative;
+        right: 250px;
+        bottom: 50px;
+    }
+    .fott{
+        position: relative;
+        bottom: 30px;
+    }
+    #logo{
+        width: 70px;
+        height: 40px;
+
+    }
+    .rout{
+        position: relative;
+        right: 250px;
+    }
+    strong{
+        position: relative;
+        bottom: 40px;
+        left: 70px;
+    }
+    .fa-eye{
+        position: relative;
+        bottom: 40px;
+        left: 320px;
+        font-size: 13px;
+    }
+} 
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .container{
+        width: 50%;
+        border-radius: 20px;
+        height: 55vh;
+        margin-top: 10px;
+        background-color: #fff;
+    }
+    footer{
+        background-color: #fff;
+        margin-top: 40px;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .lastfoot{
+        display: flex;
+        gap: 10px;
+        position: relative;
+        bottom: 20px;
+        left: 10px;
+        width: fit-content;
+    }
+    .fa-eye{
+        position: relative;
+        bottom: 40px;
+        color: rgb(7, 152, 209);
+        left: 300px;
+        font-size: 13px;
+    }
+}
