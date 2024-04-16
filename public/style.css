@@ -214,18 +214,22 @@ footer{
     left: 5px;
 }
 @media  (max-width: 414px){
-    .container{
+    body{
         overflow-x: hidden;
         overflow-y: hidden;
+    } 
+    .container{
         width: 100%;
         border-radius: 20px;
         height: 60vh;
         margin-top: 5%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
         background-color: #fff;
     }
     footer{
+        padding-left: 5px;
+        padding-right: 5px;
         background-color: #fff;
         position: relative;
         left: 0;
@@ -244,12 +248,12 @@ footer{
     }
     .imgdiv{
         position: relative;
-        right: 250px;
+        right: 240px;
         bottom: 50px;
     }
     .fott{
         position: relative;
-        bottom: 30px;
+        bottom: 40px;
     }
     #logo{
         width: 70px;
@@ -272,7 +276,7 @@ footer{
         font-size: 13px;
     }
 } 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     body{
         overflow-x: hidden;
         overflow-y: hidden;
@@ -310,4 +314,4 @@ footer{
         left: 300px;
         font-size: 13px;
     }
-}
+} */
