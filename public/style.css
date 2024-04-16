@@ -215,26 +215,32 @@ footer{
 }
 @media  (max-width: 414px){
     .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         overflow-x: hidden;
         overflow-y: hidden;
         width: 100%;
         border-radius: 20px;
-        height: 80vh;
+        height: 85vh;
         margin-top: 5%;
         margin-left: 0;
-        margin-right: 0;
         background-color: #fff; 
     }
     footer{
         padding-left: 5px;
         padding-right: 5px;
-        background-color: green;
+        background-color: blue;
         position: relative;
         left: 0;
         right: 0;
         width: auto;
         height: 0;
         bottom: 0;
+    }
+    .foot{
+        display: flex;
+        justify-content: space-between;
     }
     .lastfoot{
         display: flex;
@@ -245,16 +251,19 @@ footer{
         width: fit-content;
     }
     .imgdiv{
+        display: flex;
         position: relative;
-        right: 240px;
+        right: -260px;
         bottom: 50px;
     }
     .fott{
-        position: relative;
-        bottom: 40px;
+        position: absolute;
+        top: 80px;
+        display: flex;
+        justify-content: space-evenly;
     }
     #logo{
-        width: 70px;
+        width: 60px;
         height: 40px;
 
     }
