@@ -12,6 +12,10 @@ div > header > img{
     margin-top: 20%;
     margin-left: 90px;
 }
+#mobile{
+    visibility: hidden;
+    display: none;
+}
 .container{
     background-color: rgba(0, 0, 0, 0);
     position: relative;
@@ -214,72 +218,53 @@ footer{
     left: 5px;
 }
 @media  (max-width: 414px){
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-image: none;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #mobile{
+        visibility: visible;
+        display: inline-block;
+        width: 414.33px;
+        /* width: 100%; */
+        height: 25vh;
+        /* height: 250px; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url(./WhatsApp\ Image\ 2024-04-16\ at\ 23.19.03_de93f1a0.jpg);
+        background-size: contain;
+        background-position: top;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    div > header > img{
+        display: none;
+    }
     .container{
+        border: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        position: relative;
+        top: 250px;
+        margin-bottom: 0;
         width: 100%;
-        border-radius: 20px;
-        height: 85vh;
-        margin-top: 5%;
-        margin-left: 0;
+        height: 50vh;
+        margin: 0;
         background-color: #fff; 
-    }
-    footer{
-        padding-left: 5px;
-        padding-right: 5px;
-        background-color: #fff;
-        position: relative;
-        left: 0;
-        right: 0;
-        width: auto;
-        height: 0;
-        bottom: 0;
-    }
-    .foot{
-        display: flex;
-        justify-content: space-between;
-    }
-    .lastfoot{
-        display: flex;
-        gap: 10px;
-        position: relative;
-        bottom: 50px;
-        left: 0;
-        width: fit-content;
-    }
-    .imgdiv{
-        display: flex;
-        position: relative;
-        right: -260px;
-        bottom: 50px;
-    }
-    .fott{
-        position: absolute;
-        top: 80px;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    #logo{
-        width: 60px;
-        height: 40px;
-
-    }
-    .rout{
-        position: relative;
-        right: 250px;
-    }
-    strong{
-        position: relative;
-        bottom: 40px;
-        left: 70px;
     }
     .fa-eye{
         position: relative;
         bottom: 45px;
         left: 330px;
-        font-size: 13px;
+    }
+    footer{
+        display: none;
     }
 } 
