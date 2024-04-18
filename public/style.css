@@ -54,6 +54,7 @@ input::placeholder{
     font-size: 13px;
 }
 button{
+    cursor: pointer;
     position: relative;
     top: 20px;
     width: 80%;
@@ -222,6 +223,36 @@ footer{
     font-size: 25px;
     left: 5px;
 }
+.credentials{
+    text-align: center;
+}
+.containerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    width: fit-content;
+    position: relative;
+    top: 190px;
+    width: 300px;
+    height: 40px;
+    left: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(236, 225, 225) ;
+}
+.material-symbols-outlined{
+    font-size: small;
+    color: rgb(225, 67, 67);
+    position: relative;
+    bottom: 8px;
+}
 @media  (max-width: 414px){
     body{
         overflow-x: hidden;
@@ -291,5 +322,34 @@ footer{
     #loginBtn{
         font-size: 1em;
         font-weight: bold;
+    }
+    .containerr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+        width: fit-content;
+        position: relative;
+        top: 185px;
+        width: 300px;
+        height: 40px;
+        left: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        border-radius: 10px;
+        color: black;
+        background-color: rgb(236, 225, 225) ;
+    }
+    .slide-container{
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 25px;
+        left: 20px;
+        top: 20px;
     }
 } 
